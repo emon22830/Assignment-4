@@ -59,40 +59,63 @@
 
 //Task-05 
 
-function willSuccess(marks){
+// function willSuccess(marks){
 
-    if(Array.isArray(marks)){
-        return "Invalid";
-    }
-    let passNum = 0;
-    let FailNum = 0;
+//     if(Array.isArray(marks)){
+//         return "Invalid";
+//     }
+//     let passNum = 0;
+//     let FailNum = 0;
 
-    for(let mark of marks){
+//     for(let mark of marks){
 
-        if(typeof mark !== "number"){
-            return "Invalid";
-        }
+//         if(typeof mark !== "number"){
+//             return "Invalid";
+//         }
 
 
-        if(mark>=50){
-           passNum += 1; 
-        }
-        else{
-            FailNum += 1;
-        }
+//         if(mark>=50){
+//            passNum += 1; 
+//         }
+//         else{
+//             FailNum += 1;
+//         }
 
-    }
+//     }
     
-        if(passNum>FailNum){
-            return true
-        }
-        else{
-          return false
-        }
+//         if(passNum>FailNum){
+//             return true
+//         }
+//         else{
+//           return false
+//         }
+// }
+
+
+// console.log(willSuccess([71,55,'90',90,78]))
+
+
+
+
+
+//Problem-05 : Let's calculate total time
+
+function calculateSleepTime(timeSec){
+
+    let totalSec = 0;
+    for (let sec of timeSec){
+        totalSec += sec;
+     
+       
+    }
+     
+    let totalMin = (totalSec/60).toFixed(2)
+    
+    let totalHour = (totalSec/3600).toFixed(2)
+
+     return {"Second": totalSec, "Mintue":totalMin, "Hour": totalHour}
+  
 }
 
-
-console.log(willSuccess([71,55,'90',90,78]))
-
-
-
+let SleepRoutine = calculateSleepTime([4566,456,78,9578,567]);
+console.log(SleepRoutine);
