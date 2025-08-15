@@ -12,6 +12,20 @@ function totalFine(fare){
      return fine ;
 }
 
-let fine = totalFine(8);
+let fine = totalFine(200);
 console.log(fine);
 
+
+
+
+
+// function totalFine(fare){
+//     if(typeof fare <0 || fare === "string"){
+//         return "Invalid"
+//     }
+//     let fine = fare + fare * 0.2 + 30;
+//     return fine;
+// }
+
+
+// console.log(totalFine(50));
